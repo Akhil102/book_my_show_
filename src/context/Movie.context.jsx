@@ -9,8 +9,18 @@ const MovieProvider = ({children}) => {
         backdrop_path:"",
         poster_path:"",
     });
+    const [isOpen, setIsOpen] = useState(false);
+    const [price, setPrice] = useState(0);
+    const rentMovie = () => {
+      setIsOpen(true);
+      setPrice(2);
+  }
+  const buyMovie = () => {
+      setIsOpen(true);
+      setPrice(8)
+  }
   return (
-    <MovieContext.Provider value={{movie,setMovie}}>{children}</MovieContext.Provider>
+    <MovieContext.Provider value={{movie,setMovie,isOpen,setIsOpen,price,setPrice,rentMovie,buyMovie}}>{children}</MovieContext.Provider>
   )
 }
 

@@ -1,9 +1,12 @@
-import React from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
+import React from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import { Fragment } from 'react';
+import { useContext } from 'react';
+import { MovieContext } from '../../context/Movie.context';
 
 
 const PaymentModel = ({isOpen ,setIsOpen,price}) => {
+  
     const closeModal = () =>{
 setIsOpen(false)
     }
